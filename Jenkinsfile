@@ -1,8 +1,9 @@
 node {
+
 	def app
 
 	stage('Clone'){
-		checkout csm
+		checkout scm
 	}
 	stage('Build Image'){
 		app = docker.build("ahmed/nginx")
